@@ -16,6 +16,7 @@
 		EF76E00222F0D5A70055BEB1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00122F0D5A70055BEB1 /* CoreDataStack.swift */; };
 		EF76E00422F0D7FA0055BEB1 /* Journal+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00322F0D7FA0055BEB1 /* Journal+Convenience.swift */; };
 		EF76E00722F0D83B0055BEB1 /* MyJournal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00522F0D83B0055BEB1 /* MyJournal.xcdatamodeld */; };
+		EF76E00922F0EC710055BEB1 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00822F0EC710055BEB1 /* JournalController.swift */; };
 		EFBC2A4B22F0C809000CE3EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBC2A4A22F0C809000CE3EF /* AppDelegate.swift */; };
 		EFBC2A5022F0C809000CE3EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBC2A4E22F0C809000CE3EF /* Main.storyboard */; };
 		EFBC2A5222F0C80A000CE3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBC2A5122F0C80A000CE3EF /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		EF76E00122F0D5A70055BEB1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		EF76E00322F0D7FA0055BEB1 /* Journal+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Journal+Convenience.swift"; sourceTree = "<group>"; };
 		EF76E00622F0D83B0055BEB1 /* MyJournal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyJournal.xcdatamodel; sourceTree = "<group>"; };
+		EF76E00822F0EC710055BEB1 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		EFBC2A4722F0C809000CE3EF /* Jouranl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jouranl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBC2A4A22F0C809000CE3EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFBC2A4F22F0C809000CE3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		EFBC2A5F22F0C851000CE3EF /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF76E00822F0EC710055BEB1 /* JournalController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				EF76DFF322F0CC970055BEB1 /* JournalCollectionViewCell.swift in Sources */,
 				EF76DFFE22F0D10A0055BEB1 /* UIImage+Decompression.swift in Sources */,
 				EF76DFF622F0CD880055BEB1 /* JournalLayout.swift in Sources */,
+				EF76E00922F0EC710055BEB1 /* JournalController.swift in Sources */,
 				EF76DFF822F0CFA20055BEB1 /* JournalCollectionViewController.swift in Sources */,
 				EFBC2A4B22F0C809000CE3EF /* AppDelegate.swift in Sources */,
 				EF76E00722F0D83B0055BEB1 /* MyJournal.xcdatamodeld in Sources */,

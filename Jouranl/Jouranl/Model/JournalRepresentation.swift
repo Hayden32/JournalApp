@@ -10,11 +10,11 @@ import Foundation
 
 struct JournalRepresentation: Codable {
     
-    let title: String
-    let journalText: String
+    var title: String
+    var journalText: String
     var photo: String?
     var timestamp: Date
-    let identifier: String
+    var identifier: String
     
 }
 
