@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,6 +34,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="AoW-bm-YQC" kind="show" identifier="cellToDetail" id="edh-JO-bwg"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -40,12 +45,101 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Journal" id="CLU-8Z-uot">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="EU4-GK-qWW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="EU4-GK-qWW">
+                            <connections>
+                                <segue destination="AoW-bm-YQC" kind="show" identifier="newJournalDetail" id="C09-sU-NOU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozG-zi-QdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="101.78571428571428"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="UO4-7k-Lo1">
+            <objects>
+                <viewController id="AoW-bm-YQC" customClass="JournalDetailViewController" customModule="Jouranl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uDV-rO-WVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T82-vy-vfB">
+                                <rect key="frame" x="16" y="96" width="382" height="719"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-Id-DLA">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="193"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="193" id="DbP-GZ-vye"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vne-h5-UB9">
+                                        <rect key="frame" x="0.0" y="201" width="382" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="wD2-nY-VgP"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ulr-aD-hm1">
+                                        <rect key="frame" x="0.0" y="239" width="382" height="442"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="442" id="IQx-ci-xEh"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNH-vW-aqy">
+                                        <rect key="frame" x="0.0" y="689" width="382" height="30"/>
+                                        <state key="normal" title="Start Recording"/>
+                                        <connections>
+                                            <action selector="recordingButtonTapped:" destination="AoW-bm-YQC" eventType="touchUpInside" id="iw6-Wt-jMG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpb-0d-6rJ">
+                                <rect key="frame" x="16" y="823" width="382" height="22"/>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="addImageButtonTapped:" destination="AoW-bm-YQC" eventType="touchUpInside" id="KeB-D0-jDy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qeS-1K-i3b" firstAttribute="bottom" secondItem="Jpb-0d-6rJ" secondAttribute="bottom" constant="17" id="G1l-Tg-jKu"/>
+                            <constraint firstItem="qeS-1K-i3b" firstAttribute="trailing" secondItem="Jpb-0d-6rJ" secondAttribute="trailing" constant="16" id="NGc-Tf-5Uz"/>
+                            <constraint firstItem="Jpb-0d-6rJ" firstAttribute="top" secondItem="T82-vy-vfB" secondAttribute="bottom" constant="8" id="QwI-Jf-5We"/>
+                            <constraint firstItem="qeS-1K-i3b" firstAttribute="trailing" secondItem="T82-vy-vfB" secondAttribute="trailing" constant="16" id="cOG-Mi-UfE"/>
+                            <constraint firstItem="T82-vy-vfB" firstAttribute="leading" secondItem="qeS-1K-i3b" secondAttribute="leading" constant="16" id="d47-gO-uwJ"/>
+                            <constraint firstItem="qeS-1K-i3b" firstAttribute="bottom" secondItem="T82-vy-vfB" secondAttribute="bottom" constant="47" id="hMX-tk-lXd"/>
+                            <constraint firstItem="T82-vy-vfB" firstAttribute="top" secondItem="qeS-1K-i3b" secondAttribute="top" constant="8" id="wCr-au-YFP"/>
+                            <constraint firstItem="Jpb-0d-6rJ" firstAttribute="leading" secondItem="qeS-1K-i3b" secondAttribute="leading" constant="16" id="wTa-al-UHl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qeS-1K-i3b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="D6o-XF-Vqt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xt6-nr-2BF">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="AoW-bm-YQC" id="ZCC-Pd-Ln8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addImage" destination="Jpb-0d-6rJ" id="tUH-PW-JXB"/>
+                        <outlet property="imageView" destination="SCK-Id-DLA" id="e6c-Es-yg7"/>
+                        <outlet property="journalTextView" destination="ulr-aD-hm1" id="MZ4-Kv-BeJ"/>
+                        <outlet property="recordButton" destination="aNH-vW-aqy" id="BvJ-Zb-i7U"/>
+                        <outlet property="titleTextField" destination="Vne-h5-UB9" id="aON-Q1-usY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bb1-oa-nAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734.7826086956522" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nGQ-TS-cWM">
@@ -63,7 +157,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2my-Ma-jq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="101.78571428571428"/>
+            <point key="canvasLocation" x="287" y="102"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="C09-sU-NOU"/>
+    </inferredMetricsTieBreakers>
 </document>

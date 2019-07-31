@@ -17,6 +17,7 @@
 		EF76E00422F0D7FA0055BEB1 /* Journal+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00322F0D7FA0055BEB1 /* Journal+Convenience.swift */; };
 		EF76E00722F0D83B0055BEB1 /* MyJournal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00522F0D83B0055BEB1 /* MyJournal.xcdatamodeld */; };
 		EF76E00922F0EC710055BEB1 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00822F0EC710055BEB1 /* JournalController.swift */; };
+		EF76E00B22F1F3500055BEB1 /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76E00A22F1F3500055BEB1 /* JournalDetailViewController.swift */; };
 		EFBC2A4B22F0C809000CE3EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBC2A4A22F0C809000CE3EF /* AppDelegate.swift */; };
 		EFBC2A5022F0C809000CE3EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBC2A4E22F0C809000CE3EF /* Main.storyboard */; };
 		EFBC2A5222F0C80A000CE3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBC2A5122F0C80A000CE3EF /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		EF76E00322F0D7FA0055BEB1 /* Journal+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Journal+Convenience.swift"; sourceTree = "<group>"; };
 		EF76E00622F0D83B0055BEB1 /* MyJournal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyJournal.xcdatamodel; sourceTree = "<group>"; };
 		EF76E00822F0EC710055BEB1 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		EF76E00A22F1F3500055BEB1 /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
 		EFBC2A4722F0C809000CE3EF /* Jouranl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jouranl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBC2A4A22F0C809000CE3EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFBC2A4F22F0C809000CE3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EF76DFF722F0CFA20055BEB1 /* JournalCollectionViewController.swift */,
+				EF76E00A22F1F3500055BEB1 /* JournalDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				EF76DFF822F0CFA20055BEB1 /* JournalCollectionViewController.swift in Sources */,
 				EFBC2A4B22F0C809000CE3EF /* AppDelegate.swift in Sources */,
 				EF76E00722F0D83B0055BEB1 /* MyJournal.xcdatamodeld in Sources */,
+				EF76E00B22F1F3500055BEB1 /* JournalDetailViewController.swift in Sources */,
 				EF76E00022F0D4F50055BEB1 /* JournalRepresentation.swift in Sources */,
 				EF76E00422F0D7FA0055BEB1 /* Journal+Convenience.swift in Sources */,
 				EF76DFFC22F0D0DA0055BEB1 /* UIColor+Palette.swift in Sources */,
